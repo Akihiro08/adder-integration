@@ -1,8 +1,13 @@
 language: java
 jdk: openjdk8
-env:
-global:
-  - secure: $SONARCLOUD
+addons:
+  sonarcloud:
+    organization: "akihiro08key" # the key of the org you chose at step #3
+    token:
+      secure: $SONARCLOUD
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean verify sonar:sonar -Pcoverage -Dsonar.projectKey=myorg_myrepo
 after_deploy:
 - echo "done building, testing and deploying"
 
