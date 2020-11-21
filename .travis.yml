@@ -4,5 +4,5 @@ env:
 global:
   - secure: $SONARCLOUD
 after_deploy:
-- echo "done deploying"
+- echo "done building, testing and deploying"
 
