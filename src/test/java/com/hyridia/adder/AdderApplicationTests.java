@@ -1,7 +1,7 @@
 package com.hyridia.adder;
 
-import com.hyridia.adder.controller.AdderController;
-import org.junit.jupiter.api.BeforeAll;
+
+import com.hyridia.adder.controller.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 class AdderApplicationTests {
 
     @Autowired
