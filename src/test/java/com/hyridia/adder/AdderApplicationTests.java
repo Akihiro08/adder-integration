@@ -58,7 +58,7 @@ class AdderApplicationTests {
     {
         int num = 133;
         String json = this.restTemplate.postForObject(url+"/adder/base?num="+num, "", String.class);
-        assertThat(json.contains("Ok")).isTrue();
+        assertThat(json).contains("Ok");
     }
 
     @Test

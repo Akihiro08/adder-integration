@@ -17,7 +17,8 @@ public class AdderService {
         return this.num + adder;
     }
     public int accumulate(int adder) {
-        return this.num += adder;
+        this.num += adder;
+        return this.num;
     }
     public int random()
     {
