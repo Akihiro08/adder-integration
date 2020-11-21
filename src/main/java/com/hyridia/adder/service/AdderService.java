@@ -2,6 +2,8 @@ package com.hyridia.adder.service;
 
 import org.springframework.stereotype.Service;
 
+import java.util.Random;
+
 @Service
 public class AdderService {
     private int num;
@@ -19,6 +21,6 @@ public class AdderService {
     }
     public int random()
     {
-        return (int)(Math.random()*Integer.MAX_VALUE);
+        return new Random().nextInt(Integer.SIZE - 1);
     }
 }

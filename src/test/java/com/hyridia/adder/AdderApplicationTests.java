@@ -33,7 +33,7 @@ class AdderApplicationTests {
     @Test
     void testCurrentNumber()
     {
-        assertThat(this.restTemplate.getForObject(url+"/adder/current", Integer.class)).isEqualTo(0);
+        assertThat(this.restTemplate.getForObject(url+"/adder/current", Integer.class)).isZero();
     }
 
     @Test
@@ -58,7 +58,7 @@ class AdderApplicationTests {
     {
         int num = 133;
         String json = this.restTemplate.postForObject(url+"/adder/base?num="+num, "", String.class);
-        assertThat(json.contains("Ok")).isEqualTo(true);
+        assertThat(json.contains("Ok")).isTrue();
     }
 
     @Test
@@ -69,7 +69,7 @@ class AdderApplicationTests {
         //Vérifie l'addition
         assertThat(this.restTemplate.postForObject(url+"/adder?num="+num, "", Integer.class)).isEqualTo(num);
         //Verifie que la valeur de base est toujours égale à 0
-        assertThat(this.restTemplate.getForObject(url+"/adder/current", Integer.class)).isEqualTo(0);
+        assertThat(this.restTemplate.getForObject(url+"/adder/current", Integer.class)).isZero();
         this.restTemplate.postForObject(url+"/adder/accumulate?num="+12, "", Integer.class);
         assertThat(this.restTemplate.postForObject(url+"/adder?num="+13,"", Integer.class)).isEqualTo(num+add);
     }
@@ -77,6 +77,8 @@ class AdderApplicationTests {
     @Test
     void testRandom()
     {
-        assertThat(this.restTemplate.getForObject(url+"/adder/random", Integer.class)).isGreaterThan(-1);
+        for(int i=0; i < 100; i++){
+            assertThat(this.restTemplate.getForObject(url+"/adder/random", Integer.class)).isNotNegative();
+        }
     }
 }
