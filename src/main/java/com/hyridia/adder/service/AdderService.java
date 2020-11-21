@@ -17,4 +17,8 @@ public class AdderService {
     public int accumulate(int adder) {
         return this.num += adder;
     }
+    public int random()
+    {
+        return (int)(Math.random()*Integer.MAX_VALUE);
+    }
 }

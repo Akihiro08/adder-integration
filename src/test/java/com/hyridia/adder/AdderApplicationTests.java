@@ -73,4 +73,10 @@ class AdderApplicationTests {
         this.restTemplate.postForObject(url+"/adder/accumulate?num="+12, "", Integer.class);
         assertThat(this.restTemplate.postForObject(url+"/adder?num="+13,"", Integer.class)).isEqualTo(num+add);
     }
+
+    @Test
+    void testRandom()
+    {
+        assertThat(this.restTemplate.getForObject(url+"/adder/random", Integer.class)).isGreaterThan(-1);
+    }
 }
