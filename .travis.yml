@@ -7,7 +7,7 @@ addons:
       secure: $SONARCLOUD
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - mvn clean verify sonar:sonar -Pcoverage sonar:sonar -Dsonar.login=$LOGIN -Dsonar.projectKey=Akihiro08_adder-integration
+  - mvn clean verify sonar:sonar -Pcoverage sonar:sonar -Dsonar.projectKey=Akihiro08_adder-integration
 after_deploy:
 - echo "done building, testing and deploying"
 
