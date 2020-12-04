@@ -1,7 +1,8 @@
-package com.hyridia.adder;
+package com.hyridia.adder.junit;
 
 
 import com.hyridia.adder.controller.*;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

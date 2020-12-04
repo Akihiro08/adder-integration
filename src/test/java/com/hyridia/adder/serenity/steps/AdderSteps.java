@@ -1,4 +1,4 @@
-package com.hyridia.adder.steps.serenity;
+package com.hyridia.adder.serenity.steps;
 
 import com.hyridia.adder.controller.AdderController;
 import net.thucydides.core.annotations.Step;
@@ -14,7 +14,6 @@ public class AdderSteps {
     @Autowired
     private AdderController controller;
 
-
     private TestRestTemplate restTemplate = new TestRestTemplate();;
     private final String url = "http://localhost:8080";
 
@@ -22,12 +21,7 @@ public class AdderSteps {
     private int base;
     private int sum;
 
-    @Step
-    public void initialize_connection_given_base_and_adder(int base, int adder){
-        this.restTemplate.postForObject(url+"/adder/base?num="+base, "", String.class);
-        this.base = base;
-        this.givenNumber = adder;
-    }
+
 
     @Step
     public void initialize_connection_given_base(int base){
@@ -37,7 +31,8 @@ public class AdderSteps {
     }
 
     @Step
-    public void whenAdd() {
+    public void whenAdd(int number) {
+        this.givenNumber = number;
         sum = this.restTemplate.postForObject(url+"/adder?num="+givenNumber, "", Integer.class);
     }
 
@@ -57,7 +52,8 @@ public class AdderSteps {
     }
 
     @Step
-    public void whenAccumulate() {
+    public void whenAccumulate(int number) {
+        this.givenNumber = number;
         sum = this.restTemplate.postForObject(url+"/adder/accumulate?num="+givenNumber, "", Integer.class);
         base = this.restTemplate.getForObject(url+"/adder/current", Integer.class);
     }
