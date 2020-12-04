@@ -1,4 +1,4 @@
-package com.hyridia.adder.steps;
+package com.hyridia.adder.steps.serenity;
 
 import com.hyridia.adder.controller.AdderController;
 import net.thucydides.core.annotations.Step;

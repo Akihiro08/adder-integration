@@ -1,6 +1,6 @@
 package com.hyridia.adder;
 
-import com.hyridia.adder.steps.AdderSteps;
+import com.hyridia.adder.steps.serenity.AdderSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
