@@ -44,7 +44,7 @@
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-jbehave</artifactId>
-            <version>${sere}</version>
+            <version>1.46.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
