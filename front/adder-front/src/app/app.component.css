@@ -1,0 +1,20 @@
+mat-card {
+  margin: 1em;
+}
+
+mat-card-header {
+  border-bottom-style: solid;
+  border-width: 1px;
+  padding-bottom: 0.8em;
+  margin-bottom: 0.8em;
+  border-color: darkgray;
+}
+
+mat-form-field {
+  margin-right: 1em;
+}
+
+button {
+  margin-bottom: 1em;
+}
+

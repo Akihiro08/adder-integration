@@ -3,7 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  backend: {
+    protocol: 'http',
+    host: 'localhost',
+    port: '8080',
+    endpoints: {
+      setBase: '/adder/base?num=:num',
+      getCurrent: '/adder/current',
+      getRandom: '/adder/random',
+      accumulate: '/adder/accumulate?num=:num',
+      add: '/adder?num=:num'
+    }
+  }
 };
 
 /*

@@ -8,7 +8,7 @@ import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 
-public class AdderStory  {
+public class AdderStory {
 
     @Steps
     AdderSteps adderSteps;

@@ -22,6 +22,6 @@ public class AdderService {
     }
     public int random()
     {
-        return new Random().nextInt(Integer.SIZE - 1);
+        return new Random().nextInt(Integer.MAX_VALUE - 1);
     }
 }
