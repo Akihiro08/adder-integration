@@ -11,10 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class AdderSteps {
 
-    @Autowired
-    private AdderController controller;
-
-    private TestRestTemplate restTemplate = new TestRestTemplate();;
+    private TestRestTemplate restTemplate = new TestRestTemplate();
     private final String url = "http://localhost:8080";
 
     private int givenNumber;

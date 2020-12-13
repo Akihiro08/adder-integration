@@ -1,8 +1,6 @@
-package com.hyridia.adder.serenity.steps.stories;
+package com.hyridia.adder.serenity.stories;
 
 import com.hyridia.adder.serenity.steps.AdderSteps;
-import net.serenitybdd.core.Serenity;
-import net.serenitybdd.jbehave.SerenityStory;
 import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
